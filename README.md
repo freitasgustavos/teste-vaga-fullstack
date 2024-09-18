@@ -11,8 +11,21 @@ Iniciar os continers
 ```
 docker compose up -d
 ```
-
 Por fim, a aplicação estará disponível em `http://localhost:3000`
+
+## ✨ Tecnologias
+
+Esse teste foi desenvolvido com as seguintes tecnologias:
+
+- [Node.js](https://nodejs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Fastify](https://fastify.dev/)
+- [Vite/React](https://vitejs.dev/)
+- [Ant.design](https://ant.design/)
+- [Zod](https://zod.dev/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Socket.io](https://socket.io/)
+- [MongoDB](https://www.mongodb.com/pt-br)
 
 Feito com 💜 &nbsp;by Gustavo Freitas 👋🏻
 

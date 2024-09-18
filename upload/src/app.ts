@@ -4,7 +4,7 @@ import { initializeSocket } from "./lib/socket";
 import cors from "@fastify/cors";
 import multipart from "@fastify/multipart";
 import mongoose from "mongoose";
-import { env } from "@/env"; // Ajuste o caminho conforme necessário
+import { env } from "@/env";
 
 export const app = fastfiy();
 

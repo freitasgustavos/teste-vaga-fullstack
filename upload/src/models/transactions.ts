@@ -11,6 +11,7 @@ const transactionSchema = new Schema({
   vlMulta: String,
   vlPresta: String,
   vlCorreto: String,
+  validateCpfCnpj: String,
 });
 
 export const Transactions = model("Transactions", transactionSchema);

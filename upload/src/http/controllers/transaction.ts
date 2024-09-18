@@ -3,7 +3,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import csvParser from "csv-parser";
 import { Transactions } from "@/models/transactions";
 import { getSocketInstance } from "@/lib/socket";
-import { formatNumber } from "@/utils";
+import { formatNumber, validateCPFOrCNPJ } from "@/utils";
 
 export async function upload(request: FastifyRequest, replay: FastifyReply) {
   const file = await request.file();
@@ -34,6 +34,7 @@ export async function upload(request: FastifyRequest, replay: FastifyReply) {
         vlMulta: formatNumber(row.vlMulta),
         vlPresta: formatNumber(row.vlPresta),
         vlCorreto: row.vlTotal / row.qtPrestacoes === row.vlPresta,
+        validateCpfCnpj: validateCPFOrCNPJ(row.nrCpfCnpj),
       };
       
       promises.push(Transactions.create(data));

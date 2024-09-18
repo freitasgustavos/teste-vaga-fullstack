@@ -12,6 +12,7 @@ export type ITransaction = {
   vlAtual: number;
   idSituac: string;
   vlCorreto: string;
+  validateCpfCnpj: string;
 };
 
 export type IPagination = {

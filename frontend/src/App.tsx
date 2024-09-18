@@ -42,7 +42,16 @@ export function App() {
       title: "Cpf/Cnpj",
       dataIndex: "nrCpfCnpj",
       key: "nrCpfCnpj",
-      render: (nrCpfCnpj: string) => addMask(nrCpfCnpj),
+      render: (nrCpfCnpj: string, record) => {
+        if (record.validateCpfCnpj === "false") {
+          return (
+            <Tooltip placement="right" color="red" title="Inválido">
+              <Typography.Text type="danger">{nrCpfCnpj}</Typography.Text>
+            </Tooltip>
+          );
+        }
+        return addMask(nrCpfCnpj);
+      },
     },
     {
       title: "Valor Total",
