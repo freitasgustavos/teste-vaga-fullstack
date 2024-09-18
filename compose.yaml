@@ -1,0 +1,40 @@
+services:
+  db:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+
+  web:
+    build: ./frontend
+    container_name: web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - VITE_API_URL=http://localhost:3333/api
+      - VITE_UPLOAD_URL=http://localhost:3334/api
+      - VITE_SOCKET_URL=http://localhost:3334
+
+  api:
+    build: ./backend
+    container_name: api
+    ports:
+      - "3333:3333"
+    depends_on:
+      - db
+    environment:
+      - PORT=3333
+      - DATABASE_URL=mongodb://db:27017/kronoos
+  
+  upload:
+    build: ./upload
+    container_name: upload
+    ports:
+      - "3334:3334"
+    depends_on:
+      - db
+    environment:
+      - PORT=3334
+      - DATABASE_URL=mongodb://db:27017/kronoos
