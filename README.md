@@ -9,7 +9,7 @@ git clone https://github.com/freitasgustavos/teste-vaga-fullstack
 Iniciar os continers
 
 ```
-docker compose up
+docker compose up -d
 ```
 
 Por fim, a aplicação estará disponível em `http://localhost:3000`
