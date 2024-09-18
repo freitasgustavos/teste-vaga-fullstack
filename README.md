@@ -1,3 +1,21 @@
+## 🚀 Como executar
+
+Clone o repositório
+
+```
+git clone https://github.com/freitasgustavos/teste-vaga-fullstack
+```
+
+Iniciar os continers
+
+```
+docker compose up
+```
+
+Por fim, a aplicação estará disponível em `http://localhost:3000`
+
+Feito com 💜 &nbsp;by Gustavo Freitas 👋🏻
+
 # Teste Prático para Desenvolvedor Full Stack Kronoos
 
 Você foi designado para desenvolver uma aplicação que deve lidar com grandes volumes de dados. Você deve rodar as seguintes validações e tratativas para cada um dos dados do arquivo e mostrar um retorno ao concluir a rotina. A aplicação será responsável por fornecer uma massa de dados considerável (cerca de 30GB) e deve ser capaz de lidar com dados fornecidos.
